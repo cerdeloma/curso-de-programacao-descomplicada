@@ -1,0 +1,97 @@
+/* Selecionando a div container e centralizando os itens */
+.container {
+    text-align: center;       /* Centraliza o texto e botão */
+    background-color: #f7f7f7; /* Fundo claro */
+    padding: 30px;             /* Espaço interno */
+    border-radius: 10px;       /* Bordas arredondadas */
+    width: 400px;              /* Largura da caixa */
+    margin: 30px auto;         /*Centraliza a div na página */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* Sombra para dar profundidade */
+    /* 
+      Adicionei esse código abaixo para todos os elementos dentro do nosso container ficarem um abaixo do outro e
+      posicionados ao meio.
+    */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título estilizado */
+.container h1 { /* seletor descendente = elementos que estão dentro de outro elemento */
+    color: #e41b17;       /* Vermelho Coca-Cola */
+    font-family: Arial, sans-serif; 
+    font-size: 24px;
+}
+
+/* Parágrafo estilizado */
+.container p { /* seletor descendente = elementos que estão dentro de outro elemento */
+    color: #333;          /* Texto escuro */
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+}
+
+/* Estilo do botão */
+.container .btn {
+    background-color: #e41b17; /* Vermelho Coca-Cola */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Efeito de hover no botão */
+.container .btn:hover {
+    background-color: #b01111; /* Vermelho mais escuro */
+}
+
+/* Estilo do botão trocar */
+.container #btn-trocar {
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+  color: #333;
+}
+
+.container img {
+    width: 300px; /* largura fixa no desktop(computador) */
+}
+
+/*
+O que é @media (media query)
+
+@media é o jeito que o CSS usa pra deixar o site responsivo — ou seja, bonito e funcional em telas diferentes (celular, tablet, computador).
+
+Você usa uma condição pra dizer:
+
+“Se a tela for desse tamanho, aplique esse estilo.”
+*/
+
+/* Responsivo para telas pequenas (ex: celulares) */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;       /* container ocupa quase toda a tela */
+        padding: 20px;    /* diminui o padding */
+    }
+
+    .container img {
+        width: 100%;      /* imagem ocupa toda a largura disponível */
+        max-width: 250px; /* limite para não ficar gigante */
+    }
+
+    .container h1 {
+        font-size: 20px;  /* título menor */
+    }
+
+    .container p {
+        font-size: 14px;  /* texto menor */
+    }
+
+    .container button {
+        width: 100%;      /* botão ocupa toda a largura */
+        font-size: 15px;
+    }
+}
